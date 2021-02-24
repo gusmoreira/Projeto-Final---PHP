@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html>	
+<title> Cadastrar -  Agência de Turismo </title>
+<meta charset= "utf-8">
+<body>
+<!-- create table Cartoes_de_Credito(
+id_cartao int primary key not null auto_increment,
+titular_cartao varchar(120) not null,
+CPF_titular_cartao varchar(50) not null,
+numero_cartao varchar(100) not null,
+validade_cartao varchar (15) not null,
+cod_verificacao_cartao int not null,
+pais_cartao varchar(120) not null,
+endereco1_cartao varchar(200) not null,
+endereco2_cartao varchar(200) not null,
+CEP_cartao varchar(200) not null,
+cidade_cartao varchar(200) not null);*/ -->
+	<form id="cadastro" name ="cadastro" method="post"
+	action="cadastro_cartao.php">
+	<table width="625" border="0">
+		<tr>
+			<td width="69">Titular do Cartão:</td>
+			<td width="546"><input name="titular" type="text"
+			id="titular_cartao" size="70" maxlength="60" />
+				<span class="style1">*</span></td>
+		</tr>
+
+		<tr>
+			<td>CPF do titular:</td>
+			<td><input type="text" name="cpf" id="cpf"
+				size="20" maxlength="20" />
+			<span class="style1">*</span></td>
+		</tr>
+
+		<tr>
+			<td>Número do cartão :</td>
+			<td><input name="numero" type="text" id="numero"
+				size="70" maxlength="60" />
+			<span class="style1">*</span></td>
+		</tr>
+
+		<tr>
+			<td>Validade do cartão :</td>
+			<td><input name="validade" type="text" id="validade"
+				size="70" maxlength="60" />
+			<span class="style1">*</span></td>
+		</tr>
+
+		<tr>
+			<td>Código de Verificação:</td>
+			<td><input name="codigo" type="text" id="codigo"
+				size="70" maxlength="200" />
+			<span class="style1">*</span></td>
+		</tr>
+
+		<tr>
+			<td>Endereço 1 do cartão:</td>
+			<td><input name="endereco1" type="text" id="endereco1"
+				size="70" maxlength="200" />
+			<span class="style1">*</span></td>
+		</tr>
+
+		<tr>
+			<td>Endereço 2 do cartão:</td>
+			<td><input name="endereco2" type="text" id="endereco"
+				size="70" maxlength="200" />
+			<span class="style1">*</span></td>
+		</tr>
+
+				<tr>
+					<td height="22"></td>
+					<td>
+						<input name="Submit" type ="submit" value="Cadastrar">
+						<input name="Reset" type="reset" value="Redefinir">
+					</td>
+				</tr>
+		</table>
+	</form>
+</body>
+</html>
