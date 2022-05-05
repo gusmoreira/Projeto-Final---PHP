@@ -20,7 +20,7 @@ cep_cliente varchar(120) not null,
 telefone_cliente varchar(30) not null,
 fk_id_cartao int);*/
 
-$sql= "UPDATE Clientes SET nome_cliente = '$nome', email_cliente = '$email', endereco_cliente = '$endereco', cep_cliente= '$cep', telefone_cliente = '$telefone' WHERE CPF_cliente= '$cpf'";
+$sql= "UPDATE tb_gustavo SET nome_cliente = '$nome', email_cliente = '$email', endereco_cliente = '$endereco', cep_cliente= '$cep', telefone_cliente = '$telefone' WHERE CPF_cliente= '$cpf'";
 
 //Caso esteja algum erra na string SQL ou na conexao do banco dados finaliza a operação
 if(!mysqli_query($conn, $sql)){
@@ -31,7 +31,7 @@ echo "Registro atualiza com sucesso.<br/>";
 //Fecha conexão
 mysqli_close($conn);
 //Redireciona para a página de consulta
-header("Location: select_cliente.php");
+header("Location: select_all_cliente.php");
 
 
 ?>

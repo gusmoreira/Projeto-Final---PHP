@@ -2,7 +2,7 @@
 
 include_once "conexao.php";
 $cpf = $_POST['cpf'];
-$sql = "DELETE FROM Clientes WHERE CPF_cliente = '".$cpf."'";
+$sql = "DELETE FROM tb_gustavo WHERE CPF_cliente = '".$cpf."'";
 
 //Caso haja algum erro na string SQL finaliza a operação
 if (!mysqli_query($conn, $sql)) {

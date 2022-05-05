@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>	
-<title> Pesquisa porCPF </title>
-<meta charset= "utf-8">
-
-	<body>
-		<form id="select" name="select" method = "POST" action="select_cliente.php" >
+<meta charset="utf-8">
+<html>
+<head>
+	<title> Deletar cadastro </title>
+	<link rel="stylesheet" href="estilocrud.css">
+</head>
+<body>
+	<center><section>
+	<h2>Pesquise o cadastro do cliente atráves do seu CPF</h2>
+	<form id="cadastro" name="cadastro" method = "POST" action="select_cliente.php" >
 			<table width="625" border="0">
-				<tr>
-					<td>CPF:</td>
-					<td><input type="text" name="cpf" id="cpf"
-					size="20" maxlength="20" />
-				<span class="style1">*</span></td>
+		<tr>
+			<td>CPF:</td>
+			<td><input type="text" name="cpf" id="cpf"
+				size="20" maxlength="20" />
+			<span class="style1">*</span></td>
 		</tr>
 				
 				<tr>
@@ -21,11 +25,8 @@
 					</td>
 				</tr>
 	</table>
-
 </form>
+</section>
+</center>
 </body>
 </html>	
-
-
-
-

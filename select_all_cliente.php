@@ -2,7 +2,7 @@
 include_once"conexao.php";
 
 // criando tabela e cabeçalho de dados
-
+echo '<div class="selectall"';
 echo "<center><table border=1>";
 echo "<tr>";
 echo "<th>CPF</th>";
@@ -10,19 +10,14 @@ echo "<th>NOME</th>";
 echo "<th>E-MAIL</th>";
 echo "<th>ENDEREÇO</th>";
 echo "<th>CEP</th>";
-echo "<th>TLEFONE</th>";
+echo "<th>TELEFONE</th>";
 echo "</tr>";
 
-$sql = "SELECT * FROM Clientes";
+$sql = "SELECT * FROM tb_gustavo";
 $resultado = mysqli_query($conn,$sql) or die ("Erro ao retornar dados");
 
-// Mostra a mensagem de sucesso
-echo "<center>Registro cadastrados na base de dados.<br/></center>";
-echo "</br>";
-
-// Extraindo os dados armazenado na base de dados por meio de um loop while
 while ($registro =  mysqli_fetch_array($resultado)) {
-	$cpf = $registro ['CPF_cliente'];
+	$cpf = $registro ['cpf_cliente'];
 	$nome = $registro ['nome_cliente'];
 	$email = $registro ['email_cliente'];
 	$endereco = $registro ['endereco_cliente'];
@@ -37,27 +32,22 @@ echo "<td>".$endereco."</td>";
 echo "<td>".$cep."</td>";
 echo "<td>".$telefone."</td>";
 echo "</tr>";
-
+echo '</div>';
 }
 
 mysqli_close($conn);
-echo "</table></center>";
-echo "</br>";
-echo "<center><a href='select_variavel.html'> Consulta Individual</a>
-	<a href='select_all_variavel.php'> Consultar Todos </a>
-	<!--<a href='delete_variavel.php'> Deletar e consultar</a>-->
-	<a href='insert_variavel.php'> Inserir outro usuário </a></center>";
-echo "</br>";
+?>
 
-echo "<form method='post'>";
-		
-		echo
-		"<center>
-		<button type='submit' formaction='cadastro_cliente.html'> Inserir</button>
-		<button type='submit' formaction='delete_cliente.html'> Deletar</button>
-		<button type='submit' formaction='select_cliente.html'> Consultar</button>
-		<button type='submit' formaction='select_all_cliente.php'> Consultar Todos</button>
-		<button type='submit' formaction='atualizar_cliente.html'> Atualizar</button>
-	</center>
-
-	</form><br/>";
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-cale=1">
+	<title>Clientes cadastrados</title>
+	<link rel="stylesheet" href="estilocrud.css" type="text/css">
+</head>
+<body>
+	<h2>Tabela com todos os usuários cadastrados no sistema</h2>
+</body>
+</html>

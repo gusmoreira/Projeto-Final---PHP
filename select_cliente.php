@@ -20,7 +20,7 @@ else{
 
 	$cpfconvertido = intval($cpf);
 
-	$sql = "SELECT nome_cliente, email_cliente, endereco_cliente, cep_cliente, telefone_cliente FROM Clientes WHERE CPF_cliente=".$cpfconvertido;
+	$sql = "SELECT nome_cliente, email_cliente, endereco_cliente, cep_cliente, telefone_cliente FROM tb_gustavo WHERE CPF_cliente=".$cpfconvertido;
 
 	$rs = mysqli_query($conn, $sql);
 
